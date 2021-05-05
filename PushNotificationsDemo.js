@@ -6,15 +6,6 @@
  * @flow
  */
 
-function MagicBellEventListener({notif}) {
-  useMagicBellEvent('notifications.new', notification => {
-    notif.scheduleNotif(null, notification.title);
-  });
-
-  return null;
-}
-
-import {useMagicBellEvent} from '@magicbell/react-headless';
 import React, {Component} from 'react';
 import {
   Alert,
@@ -81,7 +72,6 @@ export default class PushNotificationsDemo extends Component {
         {this.state.fcmRegistered && <Text>FCM Configured !</Text>}
 
         <View style={styles.spacer} />
-        <MagicBellEventListener notif={this.notif} />
       </View>
     );
   }
