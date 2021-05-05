@@ -12,3 +12,4 @@ yarn start
 1. Download Xcode
 2. Open the ios/NativeNotificationsTest.xcworkspace file in XCode
 3. Open the "Signing & capabilities" screen in XCode and setup your Apple Developer credentials in the Signing section
+4. Build the project
