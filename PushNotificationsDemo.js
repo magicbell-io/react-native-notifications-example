@@ -63,6 +63,15 @@ export default class PushNotificationsDemo extends Component {
         <TouchableOpacity
           style={styles.button}
           onPress={() => {
+            this.notif.getScheduledLocalNotifications(notifs =>
+              console.log(notifs),
+            );
+          }}>
+          <Text>Console.Log Scheduled Local Notifications</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => {
             this.notif.getDeliveredNotifications(notifs => console.log(notifs));
           }}>
           <Text>Console.Log Delivered Notifications</Text>
