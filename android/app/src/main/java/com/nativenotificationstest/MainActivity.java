@@ -1,8 +1,16 @@
 package com.nativenotificationstest;
 
+import android.os.Bundle;
+import com.dieam.reactnativepushnotification.modules.RNPushNotification;
 import com.facebook.react.ReactActivity;
 
 public class MainActivity extends ReactActivity {
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+
+    RNPushNotification.IntentHandlers.add(new MagicBellIntentHandler());
+  }
 
   /**
    * Returns the name of the main component registered from JavaScript. This is used to schedule
