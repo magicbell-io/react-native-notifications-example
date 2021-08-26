@@ -87,6 +87,21 @@ export default class PushNotificationsDemo extends Component {
 
   onRegister(token) {
     this.setState({registerToken: token.token, fcmRegistered: true});
+
+    // Forward the device token to MagicBell
+    fetch('https://api.magicbell.com/push_subscriptions', {
+      method: 'POST',
+      headers: {
+        'X-MAGICBELL-API-KEY': MAGICBELL_API_KEY,
+        'X-MAGICBELL-USER-EXTERNAL-ID': CURRENT_USER_ID,
+      },
+      body: JSON.stringify({
+        push_subscription: {
+          device_token: token,
+          platform: Platform.OS,
+        },
+      }),
+    });
   }
 
   onNotif(notif) {
