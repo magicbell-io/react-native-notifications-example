@@ -4,6 +4,7 @@ This is a React Native app showcasing how to use MagicBell to power your app's n
 
 ```sh
 yarn install
+npx pod-install
 yarn start
 ```
 
