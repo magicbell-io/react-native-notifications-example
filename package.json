@@ -13,7 +13,7 @@
     "@magicbell/react-headless": "^2.3.5",
     "@react-native-community/push-notification-ios": "^1.10.1",
     "react": "^17.0.2",
-    "react-native": "^0.66.0",
+    "react-native": "^0.68.0",
     "react-native-push-notification": "^8.1.1"
   },
   "devDependencies": {
